@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO & Meta Facebook OG Sharing Tags -->
+  <title>CAMILLA PROMOS - Official Player Hub & Spin-to-Win Portal</title>
+  <meta name="description" content="Official Camilla Promos Hub. Claim your $10 Welcome Freeplay, spin the daily VIP bonus wheel, and load 9 supported platforms 24/7.">
+  
+  <!-- Open Graph Meta Tags for Facebook / Messenger Previews -->
+  <meta property="og:title" content="CAMILLA PROMOS - Official VIP Promo & Freeplay Hub">
+  <meta property="og:description" content="Claim $10 Welcome Freeplay, spin the daily 24H VIP bonus wheel, and load instant games 24/7 via Cash App, Chime, Apple Pay & Venmo.">
+  <meta property="og:image" content="https://github.com/Camilla-Gaming/Camilla-Promos/logo77.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:type" content="website">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Font: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#080b12',
+              card: '#111827',
+              gold: '#fbbf24',
+              goldHover: '#d97706',
+              purple: '#8b5cf6',
+              neon: '#10b981'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #080b12;
+      color: #f3f4f6;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .glass-card {
+      background: rgba(17, 24, 39, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .glass-gold {
+      background: linear-gradient(135deg, rgba(251, 191, 36, 0.08) 0%, rgba(139, 92, 246, 0.08) 100%);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(251, 191, 36, 0.3);
+    }
+
+    .gold-text-gradient {
+      background: linear-gradient(135deg, #fef08a 0%, #fbbf24 50%, #d97706 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Custom Ticker Marquee */
+    @keyframes marquee {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .animate-marquee {
+      display: flex;
+      width: 200%;
+      animation: marquee 22s linear infinite;
+    }
+
+    .animate-marquee:hover {
+      animation-play-state: paused;
+    }
+
+    /* Wheel Canvas Styles */
+    #wheel-canvas {
+      transition: transform 5s cubic-bezier(0.15, 0.99, 0.15, 0.99);
+    }
+  </style>
+</head>
+<body class="min-h-screen pb-28 relative">
+
+  <!-- TOP NOTICE BAR -->
+  <div class="bg-gradient-to-r from-purple-950 via-amber-950 to-purple-950 border-b border-amber-500/30 py-2 overflow-hidden relative z-20">
+    <div class="animate-marquee whitespace-nowrap text-xs font-bold text-amber-300 tracking-wide">
+      <span class="mx-6 flex items-center"><i class="fa-solid fa-bolt text-emerald-400 mr-2"></i> 24/7 FAST PAYOUTS VIA CASH APP, CHIME, VENMO, APPLE PAY & GOOGLE PAY</span>
+      <span class="mx-6 flex items-center"><i class="fa-solid fa-gift text-amber-400 mr-2"></i> $10 WELCOME FREEPLAY FOR ALL NEW PLAYERS</span>
+      <span class="mx-6 flex items-center"><i class="fa-solid fa-fire text-rose-400 mr-2"></i> 100% MATCH BONUS ON YOUR NEXT 5 DEPOSITS</span>
+      <span class="mx-6 flex items-center"><i class="fa-solid fa-users text-purple-400 mr-2"></i> 100% REFERRAL BONUS MATCH ACTIVE</span>
+      <!-- Repeated for endless loop -->
+      <span class="mx-6 flex items-center"><i class="fa-solid fa-bolt text-emerald-400 mr-2"></i> 24/7 FAST PAYOUTS VIA CASH APP, CHIME, VENMO, APPLE PAY & GOOGLE PAY</span>
+      <span class="mx-6 flex items-center"><i class="fa-solid fa-gift text-amber-400 mr-2"></i> $10 WELCOME FREEPLAY FOR ALL NEW PLAYERS</span>
+      <span class="mx-6 flex items-center"><i class="fa-solid fa-fire text-rose-400 mr-2"></i> 100% MATCH BONUS ON YOUR NEXT 5 DEPOSITS</span>
+      <span class="mx-6 flex items-center"><i class="fa-solid fa-users text-purple-400 mr-2"></i> 100% REFERRAL BONUS MATCH ACTIVE</span>
+    </div>
+  </div>
+
+  <!-- HEADER NAVIGATION -->
+  <header class="sticky top-0 z-40 w-full glass-card border-b border-gray-800 px-4 py-3 sm:px-8">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      
+      <!-- Brand Logo & Name -->
+      <a href="#" class="flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 via-purple-600 to-amber-600 p-0.5 shadow-lg shadow-amber-500/20 overflow-hidden flex items-center justify-center">
+          <img src="logo.png" onerror="this.onerror=null; this.src='https://via.placeholder.com/40/fbbf24/000000?text=CP';" alt="CAMILLA PROMOS Logo" class="w-full h-full object-cover rounded-[9px]">
+        </div>
+        <div>
+          <span class="text-lg sm:text-xl font-black tracking-wider gold-text-gradient block leading-tight">
+            CAMILLA PROMOS
+          </span>
+          <span class="text-[10px] text-purple-400 font-semibold uppercase tracking-widest block">Official VIP Lounge</span>
+        </div>
+      </a>
+
+      <!-- Direct Contact CTA Links & Official Payment Gateway -->
+      <div class="flex items-center space-x-2 sm:space-x-3">
+        <a href="https://xpay.playplay.sbs/ema" target="_blank" class="inline-flex items-center space-x-2 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-black px-3.5 py-1.5 rounded-xl text-xs font-black shadow-lg shadow-emerald-500/20 transition-all">
+          <i class="fa-solid fa-credit-card"></i>
+          <span>Pay / Deposit Now</span>
+        </a>
+        <a href="https://www.facebook.com/camillagaming777" target="_blank" class="hidden md:inline-flex items-center space-x-2 bg-blue-600/20 hover:bg-blue-600/30 text-blue-400 border border-blue-500/30 px-3 py-1.5 rounded-xl text-xs font-bold transition-all">
+          <i class="fa-brands fa-facebook"></i>
+          <span>Facebook</span>
+        </a>
+        <a href="https://m.me/103356144350019" target="_blank" class="inline-flex items-center space-x-2 bg-blue-500 hover:bg-blue-600 text-white px-3.5 py-1.5 rounded-xl text-xs font-bold shadow-md transition-all">
+          <i class="fa-brands fa-facebook-messenger"></i>
+          <span>Messenger</span>
+        </a>
+        <a href="https://t.me/Camilla777" target="_blank" class="inline-flex items-center space-x-2 bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-400 hover:to-yellow-400 text-black px-3.5 py-1.5 rounded-xl text-xs font-black shadow-lg shadow-amber-500/20 transition-all">
+          <i class="fa-paper-plane"></i>
+          <span class="hidden sm:inline">Telegram</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-8 pt-8 space-y-12">
+
+    <!-- DAILY SPIN & WIN WHEEL SECTION -->
+    <section id="spin-wheel-section" class="relative rounded-3xl glass-gold p-6 sm:p-10 border border-amber-500/40 shadow-2xl overflow-hidden">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <!-- Left: Info & Username Form -->
+        <div class="lg:col-span-6 space-y-5">
+          <div class="inline-flex items-center space-x-2 bg-amber-500/10 border border-amber-500/30 text-amber-400 px-3.5 py-1 rounded-full text-xs font-bold">
+            <i class="fa-solid fa-spinner animate-spin text-amber-400"></i>
+            <span>DAILY VIP FREEPLAY WHEEL</span>
+          </div>
+
+          <h2 class="text-3xl sm:text-5xl font-black text-white leading-tight">
+            SPIN THE <span class="gold-text-gradient">VIP WHEEL</span> FOR FREE DAILY BONUSES!
+          </h2>
+
+          <p class="text-gray-300 text-xs sm:text-sm leading-relaxed">
+            Enter your player account username below to unlock your daily 24-hour bonus spin!
+          </p>
+
+          <!-- Username Input Box -->
+          <div class="space-y-3 pt-2">
+            <label class="block text-xs font-bold text-amber-300 uppercase tracking-wider">Enter Your Username</label>
+            <div class="relative">
+              <span class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500"><i class="fa-solid fa-user"></i></span>
+              <input type="text" id="wheel-username" placeholder="Enter your player account username" class="w-full bg-gray-900 border border-gray-700 rounded-2xl py-3.5 pl-10 pr-4 text-white font-bold text-sm focus:outline-none focus:border-amber-400 transition-all">
+            </div>
+            
+            <p id="wheel-error" class="text-xs text-rose-400 font-bold hidden"><i class="fa-solid fa-circle-exclamation mr-1"></i> Please enter a valid player username.</p>
+            <p id="cooldown-timer" class="text-xs text-amber-400 font-bold hidden"><i class="fa-solid fa-clock mr-1"></i> Next spin available in: <span id="timer-countdown" class="text-white font-black">23h 59m 59s</span></p>
+
+            <button id="spin-btn" onclick="spinWheel()" class="w-full bg-gradient-to-r from-amber-500 via-amber-400 to-yellow-500 text-black font-extrabold py-4 rounded-2xl text-base shadow-xl shadow-amber-500/20 hover:scale-[1.01] transition-all flex items-center justify-center space-x-2">
+              <i class="fa-solid fa-rotate-right text-lg"></i>
+              <span>SPIN THE WHEEL NOW</span>
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Right: Animated Wheel Canvas -->
+        <div class="lg:col-span-6 flex justify-center items-center relative py-4">
+          <!-- Wheel Arrow Pointer -->
+          <div class="absolute -top-2 left-1/2 -translate-x-1/2 z-30 text-amber-400 text-3xl filter drop-shadow-lg">
+            <i class="fa-solid fa-caret-down"></i>
+          </div>
+
+          <!-- Wheel Canvas -->
+          <div class="relative w-72 h-72 sm:w-80 sm:h-80 rounded-full border-4 border-amber-400/80 shadow-2xl shadow-amber-500/30 overflow-hidden bg-gray-950">
+            <canvas id="wheel-canvas" width="320" height="320" class="w-full h-full"></canvas>
+            
+            <!-- Wheel Center Cap -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-gradient-to-br from-amber-300 to-amber-600 border-2 border-white shadow-xl flex items-center justify-center z-20">
+              <i class="fa-solid fa-crown text-black text-sm"></i>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- HERO SECTION WITH OFFICIAL PAYMENT PORTAL & $10 FREEPLAY -->
+    <section class="relative rounded-3xl glass-gold p-6 sm:p-10 border border-amber-500/40 shadow-2xl overflow-hidden">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <div class="lg:col-span-7 space-y-5">
+          <div class="inline-flex items-center space-x-2 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 px-3.5 py-1 rounded-full text-xs font-bold">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+            <span>24/7 INSTANT DEPOSIT PORTAL ACTIVE</span>
+          </div>
+
+          <h1 class="text-3xl sm:text-5xl font-black text-white leading-tight">
+            GET <span class="gold-text-gradient">$10 FREEPLAY</span> + 100% BONUS MATCH ON YOUR NEXT 5 DEPOSITS!
+          </h1>
+
+          <p class="text-gray-300 text-xs sm:text-sm leading-relaxed">
+            Welcome to CAMILLA PROMOS. Load your favorite games instantly with 24/7 fast payouts. Use our verified payment link below or contact us via Messenger to claim your new player bonus today!
+          </p>
+
+          <!-- Bonus Features Grid -->
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-1 text-xs">
+            <div class="bg-gray-900/80 p-3 rounded-xl border border-gray-800">
+              <p class="text-amber-400 font-bold">$10 Freeplay</p>
+              <p class="text-gray-400 text-[10px]">All New Accounts</p>
+            </div>
+            <div class="bg-gray-900/80 p-3 rounded-xl border border-gray-800">
+              <p class="text-purple-400 font-bold">100% Reload Match</p>
+              <p class="text-gray-400 text-[10px]">Next 5 Deposits</p>
+            </div>
+            <div class="bg-gray-900/80 p-3 rounded-xl border border-gray-800 col-span-2 sm:col-span-1">
+              <p class="text-emerald-400 font-bold">100% Referral</p>
+              <p class="text-gray-400 text-[10px]">Bring Friends & Earn</p>
+            </div>
+          </div>
+
+          <!-- Hero Action Buttons -->
+          <div class="flex flex-col sm:flex-row gap-3 pt-3">
+            <a href="https://xpay.playplay.sbs/ema" target="_blank" class="flex-1 text-center bg-gradient-to-r from-emerald-500 via-emerald-400 to-teal-500 text-black font-extrabold px-6 py-3.5 rounded-2xl text-sm shadow-xl shadow-emerald-500/20 hover:scale-[1.02] transition-transform">
+              <i class="fa-solid fa-credit-card mr-2"></i>INSTANT PAY & DEPOSIT (XPAY)
+            </a>
+            <a href="https://m.me/103356144350019?text=Hi!%20I%20want%20to%20claim%20my%20$10%20Welcome%20Freeplay" target="_blank" class="flex-1 text-center bg-gradient-to-r from-amber-500 via-amber-400 to-yellow-500 text-black font-extrabold px-6 py-3.5 rounded-2xl text-sm shadow-xl shadow-amber-500/20 hover:scale-[1.02] transition-transform">
+              <i class="fa-solid fa-gift mr-2"></i>CLAIM $10 FREEPLAY NOW
+            </a>
+          </div>
+        </div>
+
+        <!-- Promos Carousel / Highlight Cards -->
+        <div class="lg:col-span-5 space-y-3">
+          <div class="bg-gradient-to-br from-purple-900/40 to-gray-900/90 p-5 rounded-2xl border border-purple-500/30 space-y-2">
+            <div class="flex justify-between items-center">
+              <span class="text-xs font-bold text-purple-300 uppercase tracking-wider">Regular Player Bonus</span>
+              <span class="bg-purple-500/20 text-purple-300 text-[10px] font-bold px-2.5 py-0.5 rounded-md border border-purple-500/30">50% MATCH</span>
+            </div>
+            <p class="text-sm font-bold text-white">50% Regular Reload Bonus</p>
+            <p class="text-xs text-gray-400">Boost every standard deposit to maximize your spin counts.</p>
+          </div>
+
+          <div class="bg-gradient-to-br from-amber-900/40 to-gray-900/90 p-5 rounded-2xl border border-amber-500/30 space-y-2">
+            <div class="flex justify-between items-center">
+              <span class="text-xs font-bold text-amber-300 uppercase tracking-wider">Weekend Special</span>
+              <span class="bg-amber-500/20 text-amber-300 text-[10px] font-bold px-2.5 py-0.5 rounded-md border border-amber-500/30">HAPPY HOUR</span>
+            </div>
+            <p class="text-sm font-bold text-white">Weekend Happy Hour Multipliers</p>
+            <p class="text-xs text-gray-400">Special boosted bonus matches active every Friday through Sunday.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- OFFICIAL PLATFORMS SECTION -->
+    <section class="space-y-6">
+      <div class="flex justify-between items-end">
+        <div>
+          <h2 class="text-2xl font-black text-white flex items-center">
+            <i class="fa-solid fa-gamepad text-amber-400 mr-3"></i>Supported Game Platforms
+          </h2>
+          <p class="text-xs text-gray-400 mt-1">Select any platform below to launch or request an instant account load</p>
+        </div>
+        <span class="text-xs font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-3 py-1 rounded-full hidden sm:inline-block">
+          9 Platforms Online
+        </span>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-4">
+
+        <!-- Juwa -->
+        <div class="glass-card rounded-2xl p-5 border border-gray-800 hover:border-amber-500/50 transition-all flex justify-between items-center group">
+          <div>
+            <span class="text-xs font-bold text-amber-400">HOT PLATFORM</span>
+            <h3 class="text-lg font-bold text-white">Juwa</h3>
+            <p class="text-xs text-gray-400">Fish & Classic Slots</p>
+          </div>
+          <a href="https://m.me/103356144350019?text=Hi!%20I%20want%20to%20load%20my%20Juwa%20account" target="_blank" class="bg-amber-500/10 group-hover:bg-amber-500 text-amber-400 group-hover:text-black border border-amber-500/30 px-3.5 py-2 rounded-xl text-xs font-bold transition-all">
+            Load
+          </a>
+        </div>
+
+        <!-- Game Vault -->
+        <div class="glass-card rounded-2xl p-5 border border-gray-800 hover:border-purple-500/50 transition-all flex justify-between items-center group">
+          <div>
+            <span class="text-xs font-bold text-purple-400">POPULAR</span>
+            <h3 class="text-lg font-bold text-white">Game Vault</h3>
+            <p class="text-xs text-gray-400">High Jackpot Games</p>
+          </div>
+          <a href="https://m.me/103356144350019?text=Hi!%20I%20want%20to%20load%20my%20GameVault%20account" target="_blank" class="bg-purple-500/10 group-hover:bg-purple-500 text-purple-400 group-hover:text-white border border-purple-500/30 px-3.5 py-2 rounded-xl text-xs font-bold transition-all">
+            Load
+          </a>
+        </div>
+
+        <!-- Dragon Fury -->
+        <div class="glass-card rounded-2xl p-5 border border-gray-800 hover:border-rose-500/50 transition-all flex justify-between items-center group">
+          <div>
+            <span class="text-xs font-bold text-rose-400">NEW</span>
+            <h3 class="text-lg font-bold text-white">Dragon Fury</h3>
+            <p class="text-xs text-gray-400">Action & Skill Games</p>
+          </div>
+          <a href="https://m.me/103356144350019?text=Hi!%20I%20want%20to%20load%20my%20Dragon%20Fury%20account" target="_blank" class="bg-rose-500/10 group-hover:bg-rose-500 text-rose-400 group-hover:text-white border border-rose-500/30 px-3.5 py-2 rounded-xl text-xs font-bold transition-all">
+            Load
+          </a>
+        </div>
+
+        <!-- Milky Way -->
+        <div class="glass-card rounded-2xl p-5 border border-gray-800 hover:border-blue-500/50 transition-all flex justify-between items-center group">
+          <div>
+            <span class="text-xs font-bold text-blue-400">TOP CHOICE</span>
+            <h3 class="text-lg font-bold text-white">Milky Way</h3>
+            <p class="text-xs text-gray-400">Spins & Reels</p>
+          </div>
+          <a href="https://m.me/103356144350019?text=Hi!%20I%20want%20to%20load%20my%20MilkyWay%20account" target="_blank" class="bg-blue-500/10 group-hover:bg-blue-500 text-blue-400 group-hover:text-white border border-blue-500/30 px-3.5 py-2 rounded-xl text-xs font-bold transition-all">
+            Load
+          </a>
+        </div>
+
+        <!-- Fire Kirin -->
+        <div class="glass-card rounded-2xl p-5 border border-gray-800 hover:border-amber-500/50 transition-all flex justify-between items-center group">
+          <div>
+            <span class="text-xs font-bold text-amber-400">CLASSIC</span>
+            <h3 class="text-lg font-bold text-white">Fire Kirin</h3>
+            <p class="text-xs text-gray-400">Fish Shooting & Slots</p>
+          </div>
+          <a href="https://m.me/103356144350019?text=Hi!%20I%20want%20to%20load%20my%20FireKirin%20account" target="_blank" class="bg-amber-500/10 group-hover:bg-amber-500 text-amber-400 group-hover:text-black border border-amber-500/30 px-3.5 py-2 rounded-xl text-xs font-bold transition-all">
+            Load
+          </a>
+        </div>
+
+        <!-- Juwa 2.0 -->
+        <div class="glass-card rounded-2xl p-5 border border-gray-800 hover:border-emerald-500/50 transition-all flex justify-between items-center group">
+          <div>
+            <span class="text-xs font-bold text-emerald-400">UPDATED</span>
+            <h3 class="text-lg font-bold text-white">Juwa 2.0</h3>
+            <p class="text-xs text-gray-400">Next Gen Graphics</p>
+          </div>
+          <a href="https://m.me/103356144350019?text=Hi!%20I%20want%20to%20load%20my%20Juwa2.0%20account" target="_blank" class="bg-emerald-500/10 group-hover:bg-emerald-500 text-emerald-400 group-hover:text-black border border-emerald-500/30 px-3.5 py-2 rounded-xl text-xs font-bold transition-all">
+            Load
+          </a>
+        </div>
+
+        <!-- Joker -->
+        <div class="glass-card rounded-2xl p-5 border border-gray-800 hover:border-purple-500/50 transition-all flex justify-between items-center group">
+          <div>
+            <span class="text-xs font-bold text-purple-400">SLOTS</span>
+            <h3 class="text-lg font-bold text-white">Joker</h3>
+            <p class="text-xs text-gray-400">Fast Play Reels</p>
+          </div>
+          <a href="https://m.me/103356144350019?text=Hi!%20I%20want%20to%20load%20my%20Joker%20account" target="_blank" class="bg-purple-500/10 group-hover:bg-purple-500 text-purple-400 group-hover:text-white border border-purple-500/30 px-3.5 py-2 rounded-xl text-xs font-bold transition-all">
+            Load
+          </a>
+        </div>
+
+        <!-- Game Room -->
+        <div class="glass-card rounded-2xl p-5 border border-gray-800 hover:border-cyan-500/50 transition-all flex justify-between items-center group">
+          <div>
+            <span class="text-xs font-bold text-cyan-400">FEATURED</span>
+            <h3 class="text-lg font-bold text-white">Game Room</h3>
+            <p class="text-xs text-gray-400">Multi-Game Hub</p>
+          </div>
+          <a href="https://m.me/103356144350019?text=Hi!%20I%20want%20to%20load%20my%20GameRoom%20account" target="_blank" class="bg-cyan-500/10 group-hover:bg-cyan-500 text-cyan-400 group-hover:text-black border border-cyan-500/30 px-3.5 py-2 rounded-xl text-xs font-bold transition-all">
+            Load
+          </a>
+        </div>
+
+        <!-- Orion Stars -->
+        <div class="glass-card rounded-2xl p-5 border border-gray-800 hover:border-amber-500/50 transition-all flex justify-between items-center group">
+          <div>
+            <span class="text-xs font-bold text-amber-400">TOP RATED</span>
+            <h3 class="text-lg font-bold text-white">Orion Stars</h3>
+            <p class="text-xs text-gray-400">Hold & Spin Action</p>
+          </div>
+          <a href="https://m.me/103356144350019?text=Hi!%20I%20want%20to%20load%20my%20OrionStars%20account" target="_blank" class="bg-amber-500/10 group-hover:bg-amber-500 text-amber-400 group-hover:text-black border border-amber-500/30 px-3.5 py-2 rounded-xl text-xs font-bold transition-all">
+            Load
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- INTERACTIVE CASHOUT CALCULATOR & RULES SECTION -->
+    <section id="calculator" class="space-y-6">
+      <div class="text-center max-w-2xl mx-auto space-y-2">
+        <h2 class="text-2xl sm:text-3xl font-black text-white">
+          <i class="fa-solid fa-calculator text-amber-400 mr-2"></i>Official Cashout Rule Calculator
+        </h2>
+        <p class="text-xs sm:text-sm text-gray-400">Enter your intended deposit amount to preview your exact Minimum and Maximum cashout limits.</p>
+      </div>
+
+      <!-- Calculator Box -->
+      <div class="glass-gold rounded-3xl p-6 sm:p-8 max-w-3xl mx-auto border border-amber-500/40 shadow-2xl space-y-6">
+        
+        <!-- Mode Switcher Tabs -->
+        <div class="grid grid-cols-2 gap-2 bg-gray-900/90 p-1.5 rounded-2xl border border-gray-800 text-xs font-bold">
+          <button id="btn-per-deposit" onclick="setCalculatorMode('deposit')" class="py-2.5 rounded-xl text-center bg-amber-500 text-black shadow-md transition-all">
+            Premium Per-Deposit Rules
+          </button>
+          <button id="btn-100-bonus" onclick="setCalculatorMode('bonus')" class="py-2.5 rounded-xl text-center text-gray-400 hover:text-white transition-all">
+            Special 100% Signup Bonus
+          </button>
+        </div>
+
+        <!-- Deposit Input -->
+        <div class="space-y-2">
+          <label class="block text-xs font-bold text-amber-300 uppercase tracking-wider">Enter Your Deposit Amount ($)</label>
+          <div class="relative">
+            <span class="absolute left-4 top-1/2 -translate-y-1/2 text-lg font-bold text-gray-400">$</span>
+            <input type="number" id="calc-input" value="25" min="5" placeholder="Enter deposit (e.g. 25)" oninput="calculateCashouts()" class="w-full bg-gray-900 border border-gray-700 rounded-2xl py-3.5 pl-9 pr-4 text-white font-black text-lg focus:outline-none focus:border-amber-400">
+          </div>
+        </div>
+
+        <!-- Calculated Output Display -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+          
+          <div class="bg-gray-900/90 p-5 rounded-2xl border border-emerald-500/30 space-y-1">
+            <span class="text-[10px] font-bold text-emerald-400 uppercase tracking-widest block">Minimum Cashout</span>
+            <p id="out-min-cashout" class="text-2xl font-black text-white">$100.00</p>
+            <p id="out-min-formula" class="text-xs text-gray-400">(4x Loaded Amount)</p>
+          </div>
+
+          <div class="bg-gray-900/90 p-5 rounded-2xl border border-amber-500/30 space-y-1">
+            <span class="text-[10px] font-bold text-amber-400 uppercase tracking-widest block">Maximum Cashout</span>
+            <p id="out-max-cashout" class="text-2xl font-black text-amber-300">$250.00</p>
+            <p id="out-max-formula" class="text-xs text-gray-400">(10x Loaded Amount)</p>
+          </div>
+
+        </div>
+
+        <!-- Quick Claim CTA -->
+        <div class="pt-2 text-center flex flex-col sm:flex-row justify-center gap-3">
+          <a id="calc-pay-btn" href="https://xpay.playplay.sbs/ema" target="_blank" class="inline-flex items-center justify-center space-x-2 bg-emerald-500 hover:bg-emerald-400 text-black px-6 py-3 rounded-xl text-xs font-black shadow-lg shadow-emerald-500/20 transition-all">
+            <i class="fa-solid fa-credit-card"></i>
+            <span>PAY NOW VIA XPAY</span>
+          </a>
+          <a id="calc-claim-btn" href="https://m.me/103356144350019?text=Hi!%20I%20want%20to%20deposit%20$25" target="_blank" class="inline-flex items-center justify-center space-x-2 bg-amber-500 hover:bg-amber-400 text-black px-6 py-3 rounded-xl text-xs font-black shadow-lg shadow-amber-500/20 transition-all">
+            <i class="fa-solid fa-paper-plane"></i>
+            <span>DEPOSIT VIA MESSENGER</span>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Breakdown Reference Tables -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 pt-4">
+
+        <!-- Table 1: Premium Per Deposit Rules -->
+        <div class="glass-card rounded-3xl p-6 border border-gray-800 space-y-4">
+          <h3 class="text-lg font-bold text-white flex items-center">
+            <i class="fa-solid fa-layer-group text-amber-400 mr-2.5"></i>Premium Per-Deposit Rules
+          </h3>
+          
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs">
+              <thead>
+                <tr class="border-b border-gray-800 text-amber-400 uppercase text-[10px] tracking-wider">
+                  <th class="py-2.5 px-3">Deposit</th>
+                  <th class="py-2.5 px-3">Min Cash Out</th>
+                  <th class="py-2.5 px-3">Max Cash Out</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-800/60 text-gray-200">
+                <tr><td class="py-2.5 px-3 font-semibold">$5 - $10</td><td class="py-2.5 px-3 text-emerald-400 font-bold">$40 Flat</td><td class="py-2.5 px-3 text-amber-400 font-bold">10x Deposit</td></tr>
+                <tr><td class="py-2.5 px-3 font-semibold">$11 - $20</td><td class="py-2.5 px-3 text-emerald-400 font-bold">4x Deposit</td><td class="py-2.5 px-3 text-amber-400 font-bold">10x Deposit</td></tr>
+                <tr><td class="py-2.5 px-3 font-semibold">$21 - $30</td><td class="py-2.5 px-3 text-emerald-400 font-bold">4x Deposit</td><td class="py-2.5 px-3 text-amber-400 font-bold">10x Deposit</td></tr>
+                <tr><td class="py-2.5 px-3 font-semibold">$31 - $40</td><td class="py-2.5 px-3 text-emerald-400 font-bold">3x Deposit</td><td class="py-2.5 px-3 text-amber-400 font-bold">10x Deposit</td></tr>
+                <tr><td class="py-2.5 px-3 font-semibold">$41 - $50</td><td class="py-2.5 px-3 text-emerald-400 font-bold">3x Deposit</td><td class="py-2.5 px-3 text-amber-400 font-bold">10x Deposit</td></tr>
+                <tr><td class="py-2.5 px-3 font-semibold">$51 - $100</td><td class="py-2.5 px-3 text-emerald-400 font-bold">3x Deposit</td><td class="py-2.5 px-3 text-amber-400 font-bold">10x Deposit</td></tr>
+                <tr><td class="py-2.5 px-3 font-semibold">$101+</td><td class="py-2.5 px-3 text-emerald-400 font-bold">3x Deposit</td><td class="py-2.5 px-3 text-amber-400 font-bold">$800 Max</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Table 2: Special 100% Signup Bonus Rules -->
+        <div class="glass-card rounded-3xl p-6 border border-gray-800 space-y-4">
+          <h3 class="text-lg font-bold text-white flex items-center">
+            <i class="fa-solid fa-crown text-purple-400 mr-2.5"></i>100% Signup Bonus Policy
+          </h3>
+
+          <div class="bg-gray-900/60 p-4 rounded-2xl border border-purple-500/30 space-y-3 text-xs">
+            <div class="flex justify-between items-center py-2 border-b border-gray-800">
+              <span class="text-gray-300 font-medium">Minimum Cashout Amount</span>
+              <span class="font-black text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-lg border border-emerald-500/30">4x Loaded Amount</span>
+            </div>
+            <div class="flex justify-between items-center py-2">
+              <span class="text-gray-300 font-medium">Maximum Cashout Amount</span>
+              <span class="font-black text-amber-400 bg-amber-500/10 px-3 py-1 rounded-lg border border-amber-500/30">5x Loaded Amount</span>
+            </div>
+          </div>
+
+          <p class="text-xs text-gray-400 leading-relaxed pt-1">
+            * Note: The 100% Signup Bonus applies specifically to your initial promotional loads. All subsequent regular deposits follow the Premium Per-Deposit Cashout schedule shown on the left.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ACCEPTED PAYMENT CHANNELS & DIRECT LINK -->
+    <section class="glass-card rounded-3xl p-6 sm:p-8 border border-gray-800 space-y-6">
+      <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-2">
+        <div>
+          <h3 class="text-xl font-bold text-white flex items-center">
+            <i class="fa-solid fa-wallet text-emerald-400 mr-2.5"></i>Official Payment & Cashout Gateway
+          </h3>
+          <p class="text-xs text-gray-400 mt-0.5">Fast, verified loading & 24/7 payouts through your preferred banking apps</p>
+        </div>
+        <a href="https://xpay.playplay.sbs/ema" target="_blank" class="text-xs font-extrabold text-emerald-400 bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/30 px-3 py-1.5 rounded-full w-max flex items-center">
+          <i class="fa-solid fa-bolt mr-1.5"></i>Open Payment Link (XPAY) <i class="fa-solid fa-arrow-up-right-from-square ml-1.5 text-[10px]"></i>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-5 gap-3 pt-2">
+        
+        <!-- Cash App -->
+        <a href="https://xpay.playplay.sbs/ema" target="_blank" class="bg-gray-900/80 hover:bg-gray-800/80 p-4 rounded-2xl border border-gray-800 flex flex-col items-center justify-center space-y-2 text-center transition-all">
+          <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg font-black">
+            $
+          </div>
+          <span class="text-xs font-bold text-white">Cash App</span>
+        </a>
+
+        <!-- Chime -->
+        <a href="https://xpay.playplay.sbs/ema" target="_blank" class="bg-gray-900/80 hover:bg-gray-800/80 p-4 rounded-2xl border border-gray-800 flex flex-col items-center justify-center space-y-2 text-center transition-all">
+          <div class="w-10 h-10 rounded-xl bg-emerald-400/20 text-emerald-300 flex items-center justify-center text-lg font-black">
+            chime
+          </div>
+          <span class="text-xs font-bold text-white">Chime</span>
+        </a>
+
+        <!-- Apple Pay -->
+        <a href="https://xpay.playplay.sbs/ema" target="_blank" class="bg-gray-900/80 hover:bg-gray-800/80 p-4 rounded-2xl border border-gray-800 flex flex-col items-center justify-center space-y-2 text-center transition-all">
+          <div class="w-10 h-10 rounded-xl bg-gray-700/40 text-white flex items-center justify-center text-lg font-black">
+            <i class="fa-brands fa-apple"></i>
+          </div>
+          <span class="text-xs font-bold text-white">Apple Pay</span>
+        </a>
+
+        <!-- Google Pay -->
+        <a href="https://xpay.playplay.sbs/ema" target="_blank" class="bg-gray-900/80 hover:bg-gray-800/80 p-4 rounded-2xl border border-gray-800 flex flex-col items-center justify-center space-y-2 text-center transition-all">
+          <div class="w-10 h-10 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center text-lg font-black">
+            <i class="fa-brands fa-google"></i>
+          </div>
+          <span class="text-xs font-bold text-white">Google Pay</span>
+        </a>
+
+        <!-- Venmo -->
+        <a href="https://xpay.playplay.sbs/ema" target="_blank" class="bg-gray-900/80 hover:bg-gray-800/80 p-4 rounded-2xl border border-gray-800 flex flex-col items-center justify-center space-y-2 text-center transition-all col-span-2 sm:col-span-1">
+          <div class="w-10 h-10 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-lg font-black">
+            V
+          </div>
+          <span class="text-xs font-bold text-white">Venmo</span>
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- WINNER CLAIM MODAL POPUP -->
+  <div id="winner-modal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 flex items-center justify-center p-4 hidden">
+    <div class="glass-gold border border-amber-500/50 rounded-3xl p-6 sm:p-8 max-w-md w-full text-center space-y-5 shadow-2xl relative">
+      
+      <div class="w-16 h-16 rounded-2xl bg-amber-500/20 text-amber-400 border border-amber-500/40 mx-auto flex items-center justify-center text-3xl">
+        <i class="fa-solid fa-trophy"></i>
+      </div>
+
+      <div>
+        <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest block">CONGRATULATIONS!</span>
+        <h3 id="modal-prize-title" class="text-2xl font-black text-white gold-text-gradient mt-1">$5 FREEPLAY WINNER</h3>
+        <p class="text-xs text-gray-300 mt-2">Username: <span id="modal-user-display" class="font-bold text-amber-300">Player</span></p>
+      </div>
+
+      <p class="text-xs text-gray-400 bg-gray-900/80 p-3 rounded-xl border border-gray-800">
+        Click below to open Messenger with your pre-filled prize claim code!
+      </p>
+
+      <div class="space-y-2">
+        <a id="modal-claim-link" href="#" target="_blank" class="block w-full bg-gradient-to-r from-amber-500 via-amber-400 to-yellow-500 text-black font-extrabold py-3.5 rounded-2xl text-xs shadow-xl shadow-amber-500/20 hover:scale-[1.01] transition-all">
+          <i class="fa-brands fa-facebook-messenger mr-1.5"></i>CLAIM PRIZE ON MESSENGER NOW
+        </a>
+        <button onclick="closeWinnerModal()" class="text-xs text-gray-500 hover:text-gray-300 py-1">
+          Close Window
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER & META DISCLAIMER -->
+  <footer class="mt-16 border-t border-gray-800 py-8 text-center text-xs text-gray-500">
+    <div class="max-w-7xl mx-auto px-4 space-y-2">
+      <p class="font-bold text-gray-400">CAMILLA PROMOS • Official Player & VIP Promo Hub</p>
+      <p>Instant loading, transparent multiplier rules, and 24/7 fast redemptions. For entertainment purposes only.</p>
+      <p class="text-[11px] text-gray-500 pt-2 italic max-w-xl mx-auto">
+        This promotion is in no way sponsored, endorsed, administered by, or associated with Meta or Facebook.
+      </p>
+      <p class="text-[10px] text-gray-600 pt-1">© 2026 CAMILLA PROMOS. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- FLOATING MOBILE QUICK CONTACT BAR -->
+  <div class="fixed bottom-4 left-4 right-4 z-50 max-w-md mx-auto">
+    <div class="glass-card p-3 rounded-2xl border border-amber-500/40 shadow-2xl flex items-center justify-between">
+      <div class="pl-2">
+        <p class="text-[10px] font-black text-amber-400 uppercase tracking-widest">24/7 Active Gateway</p>
+        <p class="text-xs text-white font-bold">Instant Loads & Freeplay</p>
+      </div>
+      <div class="flex items-center space-x-2">
+        <a href="https://xpay.playplay.sbs/ema" target="_blank" class="bg-emerald-500 hover:bg-emerald-400 text-black px-3 py-2.5 rounded-xl text-xs font-black transition-all flex items-center space-x-1">
+          <i class="fa-solid fa-credit-card"></i>
+          <span>XPAY</span>
+        </a>
+        <a href="https://m.me/103356144350019" target="_blank" class="bg-blue-600 hover:bg-blue-500 text-white p-2.5 rounded-xl text-xs font-bold transition-all">
+          <i class="fa-brands fa-facebook-messenger text-base"></i>
+        </a>
+        <a href="https://t.me/Camilla777" target="_blank" class="bg-amber-500 hover:bg-amber-400 text-black px-3.5 py-2.5 rounded-xl text-xs font-black transition-all flex items-center space-x-1 shadow-lg shadow-amber-500/20">
+          <i class="fa-paper-plane text-xs"></i>
+          <span>Telegram</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPT LOGIC -->
+  <script>
+    let prizes = [
+      { text: "$2 FREEPLAY", color: "#d97706" },
+      { text: "20% BONUS MATCH", color: "#1e1b4b" },
+      { text: "$5 FREEPLAY", color: "#059669" },
+      { text: "50% RELOAD MATCH", color: "#4c1d95" },
+      { text: "$10 FREEPLAY", color: "#b91c1c" },
+      { text: "JACKPOT ENTRY", color: "#0284c7" },
+      { text: "100% MATCH", color: "#7c3aed" },
+      { text: "DOUBLE POINTS", color: "#d97706" }
+    ];
+
+    const canvas = document.getElementById('wheel-canvas');
+    const ctx = canvas.getContext('2d');
+    let currentRotation = 0;
+    let isSpinning = false;
+
+    async function loadPromos() {
+      try {
+        const response = await fetch('promos.json');
+        if (response.ok) {
+          const loadedPrizes = await response.json();
+          if (Array.isArray(loadedPrizes) && loadedPrizes.length >= 4) {
+            prizes = loadedPrizes;
+          }
+        }
+      } catch (err) {
+        console.log("Using default promos setup.");
+      }
+      drawWheel();
+    }
+
+    function drawWheel() {
+      const centerX = canvas.width / 2;
+      const centerY = canvas.height / 2;
+      const radius = canvas.width / 2 - 5;
+      const numSlices = prizes.length;
+      const sliceAngle = (2 * Math.PI) / numSlices;
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      for (let i = 0; i < numSlices; i++) {
+        const startAngle = i * sliceAngle;
+        const endAngle = startAngle + sliceAngle;
+
+        ctx.beginPath();
+        ctx.moveTo(centerX, centerY);
+        ctx.arc(centerX, centerY, radius, startAngle, endAngle);
+        ctx.closePath();
+
+        ctx.fillStyle = prizes[i].color || "#d97706";
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "rgba(251, 191, 36, 0.4)";
+        ctx.stroke();
+
+        ctx.save();
+        ctx.translate(centerX, centerY);
+        ctx.rotate(startAngle + sliceAngle / 2);
+        ctx.textAlign = "right";
+        ctx.fillStyle = "#ffffff";
+        ctx.font = "bold 11px Inter, sans-serif";
+        ctx.fillText(prizes[i].text, radius - 15, 4);
+        ctx.restore();
+      }
+    }
+
+    function checkUserCooldown(username) {
+      if (!username) return false;
+      const cleanUser = username.trim().toLowerCase();
+      const lastSpin = localStorage.getItem(`camilla_spin_${cleanUser}`);
+      
+      if (lastSpin) {
+        const now = Date.now();
+        const diff = now - parseInt(lastSpin);
+        const cooldownMs = 24 * 60 * 60 * 1000;
+
+        if (diff < cooldownMs) {
+          return cooldownMs - diff;
+        }
+      }
+      return 0;
+    }
+
+    function updateCooldownDisplay() {
+      const userInput = document.getElementById('wheel-username').value.trim();
+      const remainingMs = checkUserCooldown(userInput);
+      const spinBtn = document.getElementById('spin-btn');
+      const cooldownText = document.getElementById('cooldown-timer');
+      const errorText = document.getElementById('wheel-error');
+
+      if (remainingMs > 0) {
+        spinBtn.disabled = true;
+        spinBtn.classList.add('opacity-50', 'cursor-not-allowed');
+        cooldownText.classList.remove('hidden');
+        errorText.classList.add('hidden');
+
+        const hours = Math.floor(remainingMs / (1000 * 60 * 60));
+        const minutes = Math.floor((remainingMs % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((remainingMs % (1000 * 60)) / 1000);
+
+        document.getElementById('timer-countdown').innerText = `${hours}h ${minutes}m ${seconds}s`;
+      } else {
+        spinBtn.disabled = false;
+        spinBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+        cooldownText.classList.add('hidden');
+      }
+    }
+
+    document.getElementById('wheel-username').addEventListener('input', updateCooldownDisplay);
+    setInterval(updateCooldownDisplay, 1000);
+
+    function spinWheel() {
+      if (isSpinning) return;
+
+      const usernameInput = document.getElementById('wheel-username').value.trim();
+      const errorText = document.getElementById('wheel-error');
+
+      if (!usernameInput.toLowerCase().endsWith('32') || usernameInput.length < 3) {
+        errorText.classList.remove('hidden');
+        return;
+      }
+      errorText.classList.add('hidden');
+
+      const remainingMs = checkUserCooldown(usernameInput);
+      if (remainingMs > 0) {
+        updateCooldownDisplay();
+        return;
+      }
+
+      isSpinning = true;
+
+      const numSlices = prizes.length;
+      const wonIndex = Math.floor(Math.random() * numSlices);
+      const sliceDeg = 360 / numSlices;
+      
+      const targetDeg = 360 - (wonIndex * sliceDeg) - (sliceDeg / 2);
+      const extraSpins = 5 * 360;
+      const totalRotation = currentRotation + extraSpins + (targetDeg - (currentRotation % 360));
+      
+      currentRotation = totalRotation;
+      canvas.style.transform = `rotate(${totalRotation}deg)`;
+
+      setTimeout(() => {
+        isSpinning = false;
+        const wonPrize = prizes[wonIndex].text;
+
+        const cleanUser = usernameInput.toLowerCase();
+        localStorage.setItem(`camilla_spin_${cleanUser}`, Date.now().toString());
+
+        document.getElementById('modal-prize-title').innerText = `${wonPrize} WINNER!`;
+        document.getElementById('modal-user-display').innerText = usernameInput;
+        
+        const claimMsg = encodeURIComponent(`Hi! My Username is ${usernameInput}. I spun the daily wheel on CAMILLA PROMOS and won ${wonPrize}!`);
+        document.getElementById('modal-claim-link').href = `https://m.me/103356144350019?text=${claimMsg}`;
+
+        document.getElementById('winner-modal').classList.remove('hidden');
+        updateCooldownDisplay();
+      }, 5000);
+    }
+
+    function closeWinnerModal() {
+      document.getElementById('winner-modal').classList.add('hidden');
+    }
+
+    let currentMode = 'deposit';
+
+    function setCalculatorMode(mode) {
+      currentMode = mode;
+      const btnDeposit = document.getElementById('btn-per-deposit');
+      const btnBonus = document.getElementById('btn-100-bonus');
+
+      if (mode === 'deposit') {
+        btnDeposit.className = "py-2.5 rounded-xl text-center bg-amber-500 text-black shadow-md transition-all";
+        btnBonus.className = "py-2.5 rounded-xl text-center text-gray-400 hover:text-white transition-all";
+      } else {
+        btnBonus.className = "py-2.5 rounded-xl text-center bg-purple-600 text-white shadow-md transition-all";
+        btnDeposit.className = "py-2.5 rounded-xl text-center text-gray-400 hover:text-white transition-all";
+      }
+
+      calculateCashouts();
+    }
+
+    function calculateCashouts() {
+      const depositVal = parseFloat(document.getElementById('calc-input').value) || 0;
+      let minVal = 0;
+      let maxVal = 0;
+      let minFormula = '';
+      let maxFormula = '';
+
+      if (currentMode === 'bonus') {
+        minVal = depositVal * 4;
+        maxVal = depositVal * 5;
+        minFormula = '(4x Loaded Amount)';
+        maxFormula = '(5x Loaded Amount)';
+      } else {
+        if (depositVal >= 5 && depositVal <= 10) {
+          minVal = 40;
+          maxVal = depositVal * 10;
+          minFormula = '($40 Flat Minimum)';
+          maxFormula = '(10x Loaded Amount)';
+        } else if (depositVal >= 11 && depositVal <= 30) {
+          minVal = depositVal * 4;
+          maxVal = depositVal * 10;
+          minFormula = '(4x Loaded Amount)';
+          maxFormula = '(10x Loaded Amount)';
+        } else if (depositVal >= 31 && depositVal <= 100) {
+          minVal = depositVal * 3;
+          maxVal = depositVal * 10;
+          minFormula = '(3x Loaded Amount)';
+          maxFormula = '(10x Loaded Amount)';
+        } else if (depositVal >= 101) {
+          minVal = depositVal * 3;
+          maxVal = 800;
+          minFormula = '(3x Loaded Amount)';
+          maxFormula = '($800 Max Limit)';
+        } else {
+          minVal = 0;
+          maxVal = 0;
+          minFormula = '(Min deposit $5)';
+          maxFormula = '(Min deposit $5)';
+        }
+      }
+
+      document.getElementById('out-min-cashout').innerText = `$${minVal.toFixed(2)}`;
+      document.getElementById('out-max-cashout').innerText = `$${maxVal.toFixed(2)}`;
+      document.getElementById('out-min-formula').innerText = minFormula;
+      document.getElementById('out-max-formula').innerText = maxFormula;
+
+      const claimBtn = document.getElementById('calc-claim-btn');
+      claimBtn.href = `https://m.me/103356144350019?text=Hi!%20I%20want%20to%20deposit%20$${depositVal}%20on%20CAMILLA%20PROMOS`;
+    }
+
+    window.onload = function() {
+      loadPromos();
+      calculateCashouts();
+    };
+  </script>
+
+</body>
+</html>
