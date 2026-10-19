@@ -1,10 +1,10 @@
 [
-  { "text": "$2 FREEPLAY", "color": "#d97706" },
-  { "text": "20% BONUS MATCH", "color": "#1e1b4b" },
-  { "text": "$5 FREEPLAY", "color": "#059669" },
-  { "text": "50% RELOAD MATCH", "color": "#4c1d95" },
-  { "text": "$10 FREEPLAY", "color": "#b91c1c" },
-  { "text": "JACKPOT ENTRY", "color": "#0284c7" },
+  { "text": "$10 FREEPLAY ON JUWA 2.0 & ORIONSTARS", "color": "#d97706" },
+  { "text": "40% BONUS MATCH", "color": "#1e1b4b" },
+  { "text": "$7 FREEPLAY", "color": "#059669" },
+  { "text": "50% BONUS MATCH", "color": "#4c1d95" },
+  { "text": "$5 FREEPLAY ON JUWA, DRAGON FURY & FIREKIRIN", "color": "#b91c1c" },
+  { "text": "100% REFERRAL BONUS", "color": "#0284c7" },
   { "text": "100% MATCH", "color": "#7c3aed" },
-  { "text": "DOUBLE POINTS", "color": "#d97706" }
+  { "text": "$10 FREE LOAD", "color": "#d97706" }
 ]
